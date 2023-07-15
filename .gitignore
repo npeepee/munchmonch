@@ -1,0 +1,29 @@
+# Ignore Visual Studio IDE files
+.vs/
+
+# Ignore build artifacts and output files
+bin/
+build/
+*.exe
+*.dll
+*.obj
+*.lib
+*.pdb
+
+# Ignore temporary files
+*.tmp
+*.bak
+
+# Ignore generated files
+Generated/
+
+# Ignore user-specific files
+*.user
+*.suo
+*.sln.docstates
+
+# Ignore package dependency directories
+packages/
+
+# Ignore log files
+*.log
