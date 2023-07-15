@@ -2,6 +2,7 @@
 
 #include <vector>
 #include <string>
+#include <set>
 #include "Customer.h"
 #include "FoodItem.h"
 
@@ -12,6 +13,9 @@ private:
     std::string status; // Status of the order.
     Customer customer; // Customer who placed the order.
     std::vector<FoodItem> items; // List of items in the order.
+
+    // Define the valid order statuses.
+    std::set<std::string> validStatuses = { "preparing", "prepared", "out for delivery", "delivered" };
 public:
     // Constructor for the Order class.
     Order(int id, const std::string& status, const Customer& customer, const std::vector<FoodItem>& items);
@@ -29,5 +33,12 @@ public:
     std::vector<FoodItem> getItems() const;
 
     // Setter for the status field.
-    void setStatus(const std::string& status);
+    void setStatus(const std::string& status) {
+        if (validStatuses.find(status) != validStatuses.end()) {
+            this->status = status;
+        }
+        else {
+            std::cout << "Invalid status: " << status << std::endl;
+        }
+    }
 };

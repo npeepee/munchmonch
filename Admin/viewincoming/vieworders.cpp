@@ -1,23 +1,43 @@
-#include <vector>
+#include "viewOrders.h"
 #include <iostream>
-#include "Order.h"
 
-// Function to view all orders.
-// This takes a vector of Order objects as parameter.
+void displayPage(const std::vector<Order>& orders, int page) {
+    int start = page * 5;
+    int end = start + 5;
+
+    for (int i = start; i < end && i < orders.size(); i++) {
+        std::cout << "Order ID: " << orders[i].getId()
+            << ", Status: " << orders[i].getStatus()
+            << ", Customer: " << orders[i].getCustomer().getName()
+            << "\n";
+    }
+}
+
 void viewOrders(const std::vector<Order>& orders) {
-    // Iterate over each Order in the vector.
-    for (const auto& order : orders) {
-        // Print the order's id, status, and customer's name.
-        std::cout << "Order ID: " << order.getId() << "\n"
-            << "Status: " << order.getStatus() << "\n"
-            << "Customer: " << order.getCustomer().getName() << "\n"
-            << "Items: ";
+    int page = 0;
+    while (true) {
+        displayPage(orders, page);
 
-        // Iterate over each FoodItem in the order.
-        for (const auto& item : order.getItems()) {
-            // Print the item's name.
-            std::cout << item.getName() << ", ";
+        std::cout << "\nMenu:\n"
+            << "1. Next\n"
+            << "0. Exit\n"
+            << "Enter your choice: ";
+        int choice;
+        std::cin >> choice;
+
+        switch (choice) {
+        case 1:
+            if ((page + 1) * 5 < orders.size()) {
+                page++; // Go to next page only if it exists
+            }
+            else {
+                std::cout << "You're on the last page.\n";
+            }
+            break;
+        case 0: return; // Exit the function
+        default:
+            std::cout << "Invalid choice. Try again.\n";
+            continue;
         }
-        std::cout << "\n\n";
     }
 }
