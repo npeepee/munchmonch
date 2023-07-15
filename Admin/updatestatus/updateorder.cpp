@@ -1,8 +1,8 @@
-#include "updateOrderStatus.h"
+#include "updateOrder.h"
 #include <set>
 #include <iostream>
 
-void updateOrderStatus(std::vector<Order>& orders) {
+void updateOrder(std::vector<Order>& orders) {
     std::set<std::string> validStatuses = { "preparing", "prepared", "out for delivery", "delivered" };
 
     int orderId;
