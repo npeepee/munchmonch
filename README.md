@@ -1,4 +1,4 @@
-# munchmonch - `main` Branch
+# munchmonch
 
 ## About
 munchmonch is a duo-authored project by Ayden Goh (@ayd3n2) and Chua Yu Xuan (@pengsies) for Ngee Ann Polytechnic's Data Structures and Algorithm Module (Semester 3/5 (2023/2024)) assignment. munchmonch is an imitation food ordering system that utilizes data structures and algorithms in its functionalities. If you encounter any issues, please feel free to email me at pengsies@gmail.com!
