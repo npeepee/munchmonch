@@ -20,4 +20,6 @@ public:
 
     // Getter for the address field.
     std::string getAddress() const;
-};#pragma once
+};
+
+//This is a copy and paste comment to ensure camelCase was implemented

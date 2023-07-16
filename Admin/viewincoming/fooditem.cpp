@@ -17,3 +17,5 @@ std::string FoodItem::getName() const {
 double FoodItem::getPrice() const {
     return price;
 }
+
+//This is a copy and paste comment to ensure camelCase was implemented

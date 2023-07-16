@@ -21,3 +21,5 @@ public:
     // Getter for the price field.
     double getPrice() const;
 };
+
+//This is a copy and paste comment to ensure camelCase was implemented

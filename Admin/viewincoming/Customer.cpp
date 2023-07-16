@@ -17,3 +17,5 @@ std::string Customer::getName() const {
 std::string Customer::getAddress() const {
     return address;
 }
+
+//This is a copy and paste comment to ensure camelCase was implemented

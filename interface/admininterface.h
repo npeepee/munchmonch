@@ -15,3 +15,5 @@ public:
     // Method to run the admin interface
     void run();
 };
+
+//This is a copy and paste comment to ensure camelCase was implemented

@@ -32,3 +32,4 @@ void MainMenu::run() {
     }
 }
  
+ //This is a copy and paste comment to ensure camelCase was implemented

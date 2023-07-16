@@ -53,3 +53,5 @@ void AdminInterface::run() {
         std::cout << "Exceeded maximum password attempts. Returning to Main Menu...\n";
     }
 }
+
+//This is a copy and paste comment to ensure camelCase was implemented

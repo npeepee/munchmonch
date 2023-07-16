@@ -42,3 +42,5 @@ public:
         }
     }
 };
+
+//This is a copy and paste comment to ensure camelCase was implemented

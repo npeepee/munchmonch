@@ -25,3 +25,5 @@ std::vector<FoodItem> getItems() const {
 void Order::setStatus(const std::string& status) {
     this->status = status;
 }
+
+//This is a copy and paste comment to ensure camelCase was implemented

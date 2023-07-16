@@ -40,3 +40,5 @@ void viewOrders(const std::vector<Order>& orders) {
         std::cout << "An error occurred: " << e.what() << '\n';
     }
 }
+
+//This is a copy and paste comment to ensure camelCase was implemented
