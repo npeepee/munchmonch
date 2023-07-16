@@ -2,9 +2,9 @@
 #define UPDATE_ORDER_STATUS_H
 
 #include <vector>
-#include "updateOrder.h"
+#include "order.h"
 
-void updateOrderStatus(std::vector<Order>& orders, int orderId, const std::string& newStatus);
+void updateOrderStatus(std::vector<Order>& orders);
 
 #endif
 

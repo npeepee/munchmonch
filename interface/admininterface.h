@@ -1,16 +1,16 @@
-// AdminInterface.h
-
 #pragma once
 
 #include "viewOrders.h"
-#include "updateOrderStatus.h"
+#include "updateOrder.h"
+#include <vector>
 
 class AdminInterface {
 private:
     std::string password;
+    std::vector<Order>& orders; // reference to the collection of orders
 public:
     // Constructor
-    AdminInterface();
+    AdminInterface(std::vector<Order>& orders);
 
     // Method to run the admin interface
     void run();

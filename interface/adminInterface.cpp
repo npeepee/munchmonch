@@ -1,7 +1,7 @@
 #include "adminInterface.h"
 #include <iostream>
 
-AdminInterface::AdminInterface() : password("123456") {}
+AdminInterface::AdminInterface(std::vector<Order>& orders) : password("123456"), orders(orders) {}
 
 void AdminInterface::run() {
     std::string inputPassword;
@@ -25,10 +25,10 @@ void AdminInterface::run() {
                 std::getline(std::cin, choice);
 
                 if (choice == "1") {
-                    viewOrders();
+                    viewOrders(orders);
                 }
                 else if (choice == "2") {
-                    updateOrderStatus();
+                    updateOrderStatus(orders); // you may need to add parameters here as per the updateOrderStatus function definition
                 }
                 else if (choice == "3") {
                     std::cout << "This feature is currently under development.\n";
@@ -53,5 +53,3 @@ void AdminInterface::run() {
         std::cout << "Exceeded maximum password attempts. Returning to Main Menu...\n";
     }
 }
-
-//This is a copy and paste comment to ensure camelCase was implemented
