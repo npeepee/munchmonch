@@ -8,24 +8,27 @@ void updateOrder(std::vector<Order>& orders) {
     int orderId;
     std::string newStatus;
 
+
+    //check if it is not delivered
     std::cout << "Enter order ID: ";
     std::cin >> orderId;
 
     while (true) {
         std::cout << "\nSelect status for the order:\n"
-            << "1. preparing\n"
-            << "2. prepared\n"
-            << "3. out for delivery\n"
-            << "4. delivered\n"
-            << "0. Exit\n"
+            << "1. unprepared\n"
+            << "2. preparing\n"
+			<< "3. prepared\n"
+			<< "4. out for delivery\n"
+			<< "5. delivered\n"
             << "Enter your choice: ";
         int choice;
         std::cin >> choice;
         switch (choice) {
-        case 1: newStatus = "preparing"; break;
-        case 2: newStatus = "prepared"; break;
-        case 3: newStatus = "out for delivery"; break;
-        case 4: newStatus = "delivered"; break;
+		case 1: newStatus = "unprepared"; break;
+		case 2: newStatus = "preparing"; break;
+		case 3: newStatus = "prepared"; break;
+		case 4: newStatus = "out for delivery"; break;
+		case 5: newStatus = "delivered"; break
         case 0: return; // Exit the function
         default:
             std::cout << "Invalid choice. Try again.\n";
